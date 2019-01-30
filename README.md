@@ -12,7 +12,8 @@ From vars/main.yml :
 
 ```yaml
 apt_packages:
-  - pip
+  - python-pip
+  - python-dev
 ```
 
 ## Dependencies
