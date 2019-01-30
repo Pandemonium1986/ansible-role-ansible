@@ -1,2 +1,4 @@
 ---
-# vars file for ansible-role-ansible
+apt_packages:
+  - python-pip
+  - python-dev

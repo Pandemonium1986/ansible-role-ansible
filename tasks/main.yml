@@ -1,2 +1,53 @@
 ---
-# tasks file for ansible-role-ansible
+- name: Ensure stretch-backports are enabled
+  apt_repository:
+    repo: deb http://ftp.debian.org/debian stretch-backports main
+    state: present
+    filename: backports
+
+- name: Ensure ansible, python-yaml and python-psutil is remove from apt installation
+  apt:
+    name: "{{ packages }}"
+    state: absent
+    default_release: stretch-backports
+    install_recommends: no
+    update_cache: yes
+    cache_valid_time: 86400
+  vars:
+     packages:
+      - ansible
+      - python-yaml
+      - python-psutil
+
+- name: Install apt packages
+  apt:
+    name: "{{ apt_packages }}"
+    state: latest
+    default_release: stretch-backports
+    install_recommends: no
+    update_cache: yes
+    cache_valid_time: 86400
+
+- name: Self-update of pip
+  pip:
+    name: pip
+    extra_args: --upgrade
+
+- name: Ensure setuptools is installed
+  pip:
+    name: setuptools
+
+- name: Ensure ansible is installed
+  pip:
+    name: ansible
+    extra_args: --upgrade
+
+- name: Ensure ansible-lint is installed
+  pip:
+    name: ansible-lint
+    extra_args: --upgrade
+
+- name: Ensure molecule is installed
+  pip:
+    name: molecule
+    extra_args: --upgrade
