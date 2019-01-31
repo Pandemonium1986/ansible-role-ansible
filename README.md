@@ -1,5 +1,10 @@
 # Ansible role : Ansible
 
+![](https://img.shields.io/github/release/Pandemonium1986/ansible-role-ansible.svg)
+![](https://img.shields.io/github/repo-size/Pandemonium1986/ansible-role-ansible.svg)
+![](https://img.shields.io/github/release-date/Pandemonium1986/ansible-role-ansible.svg)
+![](https://img.shields.io/github/license/Pandemonium1986/ansible-role-ansible.svg)
+
 Install and configure ansible, ansible-lint and molecule.
 
 ## Requirements
