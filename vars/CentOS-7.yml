@@ -1,0 +1,4 @@
+---
+_packages:
+  - python-devel
+  - python2-pip
