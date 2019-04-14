@@ -9,14 +9,21 @@ Install and configure ansible, ansible-lint and molecule.
 
 ## Requirements
 
-This roles is self contained and install pip from debian backports if needed.
+This roles is self contained and install pip for debian, ubuntu, centos if needed.
 
 ## Role Variables
 
-From vars/main.yml :
+From defaults/main.yml :
 
 ```yaml
-apt_packages:
+ansible_users:
+  - pandemonium
+```
+
+From vars/main.yml (depends of distribution):
+
+```yaml
+_packages:
   - python-pip
   - python-dev
 ```
@@ -28,9 +35,14 @@ None.
 ## Example Playbook
 
 ```yaml
-- hosts: servers
-  roles:
-    - { role: pandemonium1986.ansible }
+- name :         Init Playbook
+  hosts :        pandama
+  become:        true
+  become_method: sudo
+  become_user:   root
+  tasks:
+    - import_role:
+        name:    pandemonium1986.ansible
 ```
 
 ## License
