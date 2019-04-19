@@ -9,7 +9,11 @@ Install and configure ansible, ansible-lint and molecule.
 
 ## Requirements
 
-This roles is self contained and install pip for debian, ubuntu, centos if needed.
+This roles is not self contained. He require pandemonium1986.pip to work correctly.
+
+```sh
+  ansible-galaxy install -f pandemonium1986.pip 
+```
 
 ## Role Variables
 
@@ -18,14 +22,6 @@ From defaults/main.yml :
 ```yaml
 ansible_users:
   - pandemonium
-```
-
-From vars/main.yml (depends of distribution):
-
-```yaml
-_packages:
-  - python-pip
-  - python-dev
 ```
 
 ## Dependencies
