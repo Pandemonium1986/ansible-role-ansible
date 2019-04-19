@@ -15,4 +15,4 @@ galaxy_info:
     - name:            Ubuntu
       versions:        ['bionic']
   galaxy_tags:         ['automation', 'ansible', 'system']
-dependencies:          []
+dependencies:          ['pandemonium1986.pip']
