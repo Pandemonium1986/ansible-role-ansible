@@ -1,21 +1,8 @@
 ---
-- name:         Include OS-specific variables (Debian).
-  include_vars: "{{ ansible_distribution }}-{{ ansible_distribution_version.split('.')[0] }}.yml"
-  when:         ansible_os_family == 'Debian'
-
-- name:         Include OS-specific variables (RedHat).
-  include_vars: "{{ ansible_distribution }}-{{ ansible_distribution_version.split('.')[0] }}.yml"
-  when:         ansible_os_family == 'RedHat'
-
-- name:         Install packages
-  package:
-    name:       "{{ _packages }}"
-    state:      present
-
 - name:         Ensure ansible, ansible-lint and molecule are installed
   pip:
     name:       molecule
-    extra_args: --user --upgrade
+    extra_args: --user
   become:       true
   become_user:  "{{ item }}"
   loop:         "{{ ansible_users|flatten(levels=1) }}"
