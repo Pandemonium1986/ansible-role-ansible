@@ -9,10 +9,10 @@ Install and configure ansible, ansible-lint and molecule.
 
 ## Requirements
 
-This roles is not self contained. He require pandemonium1986.pip to work correctly.
+This role is not self contained. He requires pandemonium1986.pip to work correctly.
 
 ```sh
-  ansible-galaxy install -f pandemonium1986.pip 
+  ansible-galaxy install -f pandemonium1986.pip
 ```
 
 ## Role Variables
@@ -31,7 +31,7 @@ None.
 ## Example Playbook
 
 ```yaml
-- name :         Init Playbook
+- name :         Ansible play
   hosts :        pandama
   become:        true
   become_method: sudo
