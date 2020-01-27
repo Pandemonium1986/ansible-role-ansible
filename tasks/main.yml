@@ -1,4 +1,13 @@
 ---
+- name:         Ensure wheel, setuptools are in latest version
+  pip:
+    name:       [ wheel, setuptools ]
+    extra_args: --user
+    state:      latest
+  become:       true
+  become_user:  "{{ item }}"
+  loop:         "{{ ansible_users|flatten(levels=1) }}"
+
 - name:         Ensure ansible, ansible-lint and molecule are installed
   pip:
     name:       molecule

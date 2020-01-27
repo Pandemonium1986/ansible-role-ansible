@@ -1,0 +1,11 @@
+---
+- name:        Prepare
+  hosts:       all
+  tasks:
+    - name:    Ensure sudo is installed on all platforms
+      package:
+        name:  [ sudo, gcc ]
+        state: present
+    - name:    Create molecule user
+      user:
+        name:  "pandemonium"
