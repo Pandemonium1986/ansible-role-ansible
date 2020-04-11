@@ -18,4 +18,4 @@ before_script:
 molecule:
   stage: test
   script:
-    - cd molecule/default && molecule test
+    - molecule test
