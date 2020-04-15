@@ -1,9 +1,9 @@
 # Ansible role : Ansible
 
-![Ansible Role](https://img.shields.io/ansible/role/37338?logo=ansible&link=https://galaxy.ansible.com/pandemonium1986/ansible)
-![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/Pandemonium1986/ansible-role-ansible?logo=gitlab&link=https://gitlab.com/Pandemonium1986/ansible-role-ansible/pipelines)
-![GitHub release](https://img.shields.io/github/release/Pandemonium1986/ansible-role-ansible.svg?logo=github&link=https://github.com/Pandemonium1986/ansible-role-ansible/releases)
-![Github license](https://img.shields.io/github/license/Pandemonium1986/ansible-role-ansible.svg?logo=github&link=https://github.com/Pandemonium1986/ansible-role-ansible/blob/master/LICENSE)
+![Ansible Role](https://img.shields.io/ansible/role/37338?logo=ansible)
+![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/Pandemonium1986/ansible-role-ansible?logo=gitlab)
+![GitHub release](https://img.shields.io/github/release/Pandemonium1986/ansible-role-ansible.svg?logo=github)
+![Github license](https://img.shields.io/github/license/Pandemonium1986/ansible-role-ansible.svg?logo=github)
 ![Ansible Quality Score](https://img.shields.io/ansible/quality/37338?logo=ansible)
 
 Install and configure ansible, ansible-lint and molecule.
