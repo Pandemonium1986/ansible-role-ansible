@@ -6,6 +6,10 @@
 ![Github license](https://img.shields.io/github/license/Pandemonium1986/ansible-role-ansible.svg?logo=github)
 ![Ansible Quality Score](https://img.shields.io/ansible/quality/37338?logo=ansible)
 
+## DISCLAIMER
+
+This role is no longer support. Please refer to the role [ansible-role-pip](https://github.com/Pandemonium1986/ansible-role-pip)
+
 Install and configure ansible, ansible-lint and molecule.
 
 ## Requirements
